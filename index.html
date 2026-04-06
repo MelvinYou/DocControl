@@ -6,57 +6,35 @@
 
   <style>
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
       text-align: center;
       background-color: #f5f5f5;
+      margin: 0;
+      padding-top: 40px;
     }
 
     h2 {
-      margin-top: 30px;
-    }
-
-    .video-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 20px;
+      margin-bottom: 20px;
     }
 
     video {
-      width: 80%;
-      max-width: 900px;
-      cursor: pointer;
+      width: 800px;
+      max-width: 95%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- 1. Title updated -->
   <h2>Simploud | Document Control & Training</h2>
 
-  <div class="video-container">
-    <video id="myVideo" controls poster="thumbnail.jpg">
-      <source src="1_Simploud QMS  Document Management DMS and Employee Trainings TMS.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </div>
-
-  <script>
-    // 2. Fullscreen on play
-    const video = document.getElementById("myVideo");
-
-    video.addEventListener("play", () => {
-      if (video.requestFullscreen) {
-        video.requestFullscreen();
-      } else if (video.webkitRequestFullscreen) {
-        video.webkitRequestFullscreen();
-      } else if (video.msRequestFullscreen) {
-        video.msRequestFullscreen();
-      }
-    });
-  </script>
+  <video controls poster="thumbnail.jpg">
+    <source src="1_Simploud QMS  Document Management DMS and Employee Trainings TMS.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 
 </body>
 </html>
