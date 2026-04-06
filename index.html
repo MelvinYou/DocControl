@@ -10,19 +10,28 @@
     text-align: center;
     background-color: #f5f5f5;
     margin: 0;
-    padding-top: 40px;
+    padding: 20px;
   }
 
   h2 {
     margin-bottom: 20px;
+    font-size: 28px;          /* desktop size */
   }
 
   video {
-    width: 1100px;      /* 🔥 increase this */
-    max-width: 95%;     /* keeps it responsive */
+    width: 95%;
+    max-width: 1100px;
     height: auto;
     display: block;
     margin: 0 auto;
+  }
+
+  /* 🔥 Mobile optimization */
+  @media (max-width: 600px) {
+    h2 {
+      font-size: 20px;        /* bigger relative on mobile */
+      line-height: 1.3;
+    }
   }
 </style>
 </head>
