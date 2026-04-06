@@ -2,13 +2,61 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Embedded Video</title>
+  <title>Document Control</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f5f5f5;
+    }
+
+    h2 {
+      margin-top: 30px;
+    }
+
+    .video-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    video {
+      width: 80%;
+      max-width: 900px;
+      cursor: pointer;
+    }
+  </style>
 </head>
+
 <body>
-  <h2>My Video</h2>
-  <video width="650" height="365" controls poster="thumbnail.jpg">
-    <source src="1_Simploud QMS  Document Management DMS and Employee Trainings TMS.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+
+  <!-- 1. Title updated -->
+  <h2>Simploud | Document Control & Training</h2>
+
+  <div class="video-container">
+    <video id="myVideo" controls poster="thumbnail.jpg">
+      <source src="1_Simploud QMS  Document Management DMS and Employee Trainings TMS.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <script>
+    // 2. Fullscreen on play
+    const video = document.getElementById("myVideo");
+
+    video.addEventListener("play", () => {
+      if (video.requestFullscreen) {
+        video.requestFullscreen();
+      } else if (video.webkitRequestFullscreen) {
+        video.webkitRequestFullscreen();
+      } else if (video.msRequestFullscreen) {
+        video.msRequestFullscreen();
+      }
+    });
+  </script>
+
 </body>
 </html>
