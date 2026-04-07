@@ -23,6 +23,12 @@
       padding: 20px;
     }
 
+    /* 🔥 NEW: CONTAINER (align everything) */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
     /* 🔥 TITLE */
     h2 {
       font-size: 34px;
@@ -32,7 +38,7 @@
 
     /* 🔥 VIDEO */
     video {
-      width: 95%;
+      width: 100%;              /* 🔥 FIX alignment */
       max-width: 1000px;
       border-radius: 8px;
     }
@@ -42,38 +48,40 @@
       font-size: 20px;
       line-height: 1.8;
       margin-top: 25px;
-      padding: 0 15px;
       color: #333;
     }
 
     /* 🔥 CTA BUTTON */
-    .cta a {
-      display: block;
-      margin: 25px auto 0;
-      background: #007BFF;
-      color: white;
-      padding: 16px;
-      text-decoration: none;
-      border-radius: 10px;
-      font-size: 20px;
-      width: 260px;
+    .cta {
+      margin-top: 25px;
     }
 
-    /* 🔥 MOBILE — MAKE IT VERY LARGE */
+    .cta a {
+      display: inline-block;   /* 🔥 FIX centering */
+      background: #007BFF;
+      color: white;
+      padding: 14px 24px;
+      text-decoration: none;
+      border-radius: 10px;
+      font-size: 18px;
+    }
+
+    /* 🔥 MOBILE — BALANCED */
     @media (max-width: 600px) {
 
       h2 {
-        font-size: 30px;   /* 🔥 VERY BIG */
+        font-size: 30px;
       }
 
       .description {
-        font-size: 18px;   /* 🔥 VERY READABLE */
+        font-size: 18px;
+        padding: 0 10px;
       }
 
       .cta a {
-        font-size: 18px;
-        width: 100%;
-        padding: 18px;
+        font-size: 17px;
+        padding: 14px 20px;
+        width: auto;          /* 🔥 FIX full-width issue */
       }
 
       body {
@@ -85,20 +93,25 @@
 
 <body>
 
-  <h2>Simploud | Document Control & Training</h2>
+  <!-- 🔥 ONLY ADDITION -->
+  <div class="container">
 
-  <video controls poster="CD_thumbnail.png">
-    <source src="1_Simploud QMS  Document Management DMS and Employee Trainings TMS.mp4" type="video/mp4">
-  </video>
+    <h2>Simploud | Document Control & Training</h2>
 
-  <p class="description">
-    Trusted by 200+ customers globally, Simploud is a NextGen eQMS platform that unifies all quality processes into one system to drive compliance and audit readiness.
-  </p>
+    <video controls poster="CD_thumbnail.png">
+      <source src="1_Simploud QMS  Document Management DMS and Employee Trainings TMS.mp4" type="video/mp4">
+    </video>
 
-  <div class="cta">
-    <a href="https://wa.me/6597720003?text=Hi%20Melvin%2C%20I%20came%20across%20your%20Simploud%20eQMS%20video%20and%20would%20like%20to%20find%20out%20more." target="_blank">
-      Keen to learn more?
-    </a>
+    <p class="description">
+      Trusted by 200+ customers globally, Simploud is a NextGen eQMS platform that unifies all quality processes into one system to drive compliance and audit readiness.
+    </p>
+
+    <div class="cta">
+      <a href="https://wa.me/6597720003?text=Hi%20Melvin%2C%20I%20came%20across%20your%20Simploud%20eQMS%20video%20and%20would%20like%20to%20find%20out%20more." target="_blank">
+        Keen to learn more?
+      </a>
+    </div>
+
   </div>
 
 </body>
